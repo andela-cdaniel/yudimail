@@ -1,0 +1,62 @@
+.static-index {
+  .header {
+    height: 75vh;
+    background-image: linear-gradient(to bottom right, $main-color 0%, rgba(251, 131, 131, .6) 100%), image-url('mail-bg.jpg');
+    background-size: cover;
+    color: #fff;
+  }
+
+  .how-to {
+    margin-top: 25px;
+
+    header > h2 {
+      font-size: $large + 5;
+      font-weight: 100;
+      margin-bottom: 45px;
+    }
+
+    [class$="-step"] {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 45px;
+      margin-bottom: 55px;
+      position: relative;
+
+      h3 {
+
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      &::after {
+        position: absolute;
+        top: -44px;
+        right: -30px;
+        font-size: 45px;
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $main-color;
+        color: #fff;
+      }
+    }
+
+    $i: 1;
+
+    @each $num in first second third fourth {
+      .#{$num}-step {
+        &::after {
+          content: "#{$i}";
+        }
+      }
+
+      $i: $i + 1;
+    }
+  }
+}
+

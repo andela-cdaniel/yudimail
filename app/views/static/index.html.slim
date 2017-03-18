@@ -1,0 +1,54 @@
+section.how-to.container
+  header
+    h2 How to setup Yudimail
+
+  .first-step
+    .row
+      .col-sm-6.col-sm-offset-3
+        h3 Create an account
+        p
+          ' Luckily, you only have to do this once and it's smooth sailing all the way from here we promise.
+          ' If you already have an account, then you'd need to login to your account.
+
+        .actions.btn-group
+          button.sign-up.btn.btn-info Create an account
+          button.login.btn.btn-warning Login to your acocunt
+
+  .second-step
+    .row
+      .col-sm-6.col-sm-offset-3
+        h3 Connect your form to Yudimail
+        p
+          ' Every form has an
+          code action
+          ' attribute that is used to determine where a form's information should be sent to. On dynamic sites,
+          ' there is usually a server side component that takes care of handling this but on static
+          ' sites, you are out of luck because of the lack of a server side component. Luckily for us
+          ' Yudimail stands in as that server side component to give static sites that extra edge it needs.
+
+          ' As a user of Yudimail, you get a special token assigned to your account(s) that is used to identify
+          ' forms that belong to you. Just point the form to this URL and add your token as the path and voila!
+          ' you are good to go.
+
+          pre
+            ' &lt;form action="https://yudimail.io/&lt;enter token here&gt;" method="POST"&gt;
+            ' &lt;!-- input fields --&gt;
+            ' &lt;/form&gt;
+
+  .third-step
+    .row
+      .col-sm-6.col-sm-offset-3
+        h3 Ensure every input field is named appropriately
+        p
+          ' Add a
+          code name
+          ' attribute to every form element on your page, this is how they'll be identified when the form's data
+          ' is packaged and sent to you. Any form element without a name attribute will not get sent.
+
+  .fourth-step
+    .row
+      .col-sm-6.col-sm-offset-3
+        h3 That's all folks!
+        p
+         ' Seriously, that's all. At this point, when someone interacts with a form on your website, Yudimail will take
+         ' care of safely packaging and sending the data to your email address. Now relax and let Yudimail work it's magic.

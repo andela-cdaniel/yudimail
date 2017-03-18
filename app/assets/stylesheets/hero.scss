@@ -1,0 +1,18 @@
+.hero {
+  font-weight: 100;
+
+  h1 {
+    font-size: $very-large;
+    font-weight: 100;
+  }
+
+  .get-started {
+    border-color: #FE5F55;
+    border-radius: 0;
+    background: #FE5F55;
+    color: #fff;
+    margin-top: 15px;
+    font-weight: 100;
+    padding: 10px 15px;
+  }
+}

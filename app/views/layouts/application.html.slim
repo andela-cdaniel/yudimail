@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Yudimail - Easy mail sending for static sites
+    = csrf_meta_tags
+    meta(name="viewport" content="wdth=device-width, initial-scale=1.0")
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+
+  body(class="#{controller_and_action_name}")
+    header.header
+      = render 'shared/navbar'
+      = render 'partials/hero' if current_page?('/')
+    = yield
+    = render 'shared/footer'

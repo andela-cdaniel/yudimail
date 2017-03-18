@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+
+// Typography
+
+$mont: 'Montserrat', sans-serif;
+
+$base-size: 14px;
+$ratio: 1.333;
+
+$small: $base-size / ($ratio * 1);
+$large: $base-size * $ratio * 2;
+$very-large: $base-size * $ratio * 4;
+$super-large: $base-size * $ratio * 6;
+
+// Color
+
+$main-color: #fe5f55;

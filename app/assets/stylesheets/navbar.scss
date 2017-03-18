@@ -1,0 +1,25 @@
+.navigation {
+  text-align: left;
+  padding: 15px;
+
+  .site-logo {
+    color: #fff;
+    text-decoration: none;
+
+    .fa {
+      transform: rotate(35deg) translateY(2px);
+      transition-duration: .4s;
+    }
+  }
+
+  .navlinks {
+    display: inline-block;
+    float: right;
+
+    .navlink {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+  }
+}
